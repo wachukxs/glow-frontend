@@ -39,10 +39,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 30px;
+            padding: 30px 0px;
+
+            margin: 0px 70px;
         }
 
-        *,
         html,
         body {
             margin: 0px;
@@ -57,11 +58,6 @@
 
         header div.left-link {
             font-family: 'Lato', sans-serif;
-        }
-
-        section[images-place] {
-            display: grid;
-            grid-template-columns: 2fr 3fr;
         }
 
         section[images-place] .seconddiv {
@@ -107,24 +103,25 @@
         p.item-name {
             font-size: large;
             color: #1a1738;
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
         p.sec-text,
         header span[logo],
         .lead-text,
-        .review-text {
+        .review-text,
+        .reviewer-name {
             color: #1a1738;
         }
 
         p.price {
-            margin-top: 5px;
+            margin-top: -10px;
             font-size: small;
         }
 
         section[highlights] {
             display: grid;
-            grid-template-columns: 4fr 2fr;
+            grid-template-columns: 4fr 1fr;
         }
 
         section[highlights]>div:first-child {
@@ -132,13 +129,16 @@
         }
 
         section[highlights] img {
-            width: 120%;
-            margin-left: -30%;
+            width: 250px;
+            margin-left: -45%;
             border-radius: 180px;
         }
 
         section[highlights]>div:first-child {
-            padding: 50px;
+            padding-top: 50px;
+            padding-right: 50px;
+            padding-bottom: 50px;
+            padding-left: 70px;
         }
 
         section[highlights]>div>p:first-child {
@@ -147,6 +147,10 @@
 
         section[highlights]>div:first-child>p {
             max-width: 80%;
+        }
+
+        section[highlights] .portrait {
+            margin: auto;
         }
 
         p[lh] {
@@ -213,16 +217,18 @@
             display: flex;
 
             justify-content: space-evenly;
-            column-gap: 85px;
+            column-gap: 60px;
             align-items: center;
         }
 
-        img.in-firstdiv {
-            width: 75%;
-            height: 75%;
+        .firstdiv {
+            margin: auto 0;
+        }
 
-            margin-left: 40%;
-            margin-top: 20%;
+        img.in-firstdiv {
+            width: 130%;
+
+            margin-left: 15%;
             position: relative;
 
 
@@ -233,7 +239,10 @@
         }
 
         .seconddiv {
-            padding: 175px;
+            padding-top: 175px;
+            padding-right: 175px;
+            padding-bottom: 40px;
+            padding-left: 175px;
         }
 
         .lead-text {
@@ -292,8 +301,8 @@
             grid-template-columns: 3fr 2fr;
         }
 
-        section[first] p:first-child {
-            font-size: 100px;
+        p.sec-text {
+            font-size: 60px;
         }
 
         .left-links div {
@@ -316,8 +325,7 @@
         }
 
         div.one-major-image>img {
-            width: 185%;
-            margin-left: -70%;
+            width: 500px;
         }
 
 
@@ -328,8 +336,12 @@
 
 
         section[q-and-a]>div:nth-child(2)>p:nth-child(1) {
-            font-size: 60px;
+            font-size: 40px;
             font-weight: 300;
+        }
+
+        section[q-and-a] .your-questions {
+            padding: 50px;
         }
 
         span[logo] {
@@ -364,6 +376,7 @@
         div.intro-text>p:first-child {
             font-size: 45px;
             margin-bottom: 5px;
+            margin-top: 0px;
         }
 
         div.intro-text>button {
@@ -479,8 +492,11 @@
             display: none;
         }
 
+        .a-product-image {
+            margin: auto 0;
+        }
+
         .a-product-image>img {
-            margin-top: 70px;
 
             border-top-left-radius: 47%;
             border-top-right-radius: 47%;
@@ -495,13 +511,29 @@
             padding: 0px 70px;
         }
 
+        section[first] {
+            margin-top: 100px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+
+            padding-top: 0px;
+            padding-right: 70px;
+            padding-bottom: 0px;
+            padding-left: 70px;
+        }
+
         section[samples] {
             margin-bottom: -70px;
             padding: 0px 70px;
         }
 
         section[images-place] {
-            margin-top: 50px;
+
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+
+            margin-top: -5px;
 
             padding-top: 0px;
             padding-right: 0px;
@@ -513,7 +545,7 @@
             margin-top: 50px;
 
             padding-top: 0px;
-            padding-right: 70px;
+            padding-right: 0px;
             padding-bottom: 0px;
             padding-left: 0px;
         }
@@ -528,10 +560,17 @@
             margin: 30px auto;
         }
 
+        span[send-icon] {
+            rotate: -45deg;
+            margin-bottom: 5px;
+            margin-left: 1px;
+            font-size: 20px;
+        }
+
 
         section[company-logos] {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
         }
 
         section[company-logos] img {
@@ -544,11 +583,15 @@
             grid-template-columns: 5fr 1fr;
         }
 
-        .a-review>div {
+        .a-review>div.the-review {
             background-color: white;
             padding: 30px 50px;
 
             margin-right: -120px;
+        }
+
+        .the-review p {
+            margin-left: 15px
         }
 
         .a-review span[icon] {
@@ -619,6 +662,7 @@
         .img-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 10px;
         }
 
         .img-wrapper * {
@@ -659,6 +703,26 @@
         .single-column > p, .cta-section > p {
             padding-bottom: 25px;
         }
+
+        .reviewer-location {
+            font-size: 12px;
+        }
+
+        .inline-text-image {
+            border-radius: 25px;
+        }
+
+        /* ...make ::after or ::before, or use background image */
+        .white-line {
+            border: 1px solid white;
+            height: 40px;
+            width: 62px;
+            margin-top: 11px;
+            margin-left: 3px;
+            border-radius: 25px;
+            position: absolute;
+            
+        }
     </style>
 </head>
 
@@ -698,7 +762,7 @@
             <p class="sec-text">
                 Let your skin Going <span img>
                     <span class="white-line"></span>
-                    <img class="inline-text-image" width="100px" src="assets/images/wepik-photo-mode-202288-32350.png"
+                    <img class="inline-text-image" width="70px" src="assets/images/wepik-photo-mode-202288-32350.png"
                         alt="tiny model">
                 </span> Out.
             </p>
@@ -821,7 +885,7 @@
     <section highlights>
         <div>
             <p class="lead-text">
-                We make going all natural <span>Beauty</span>.
+                We make going all natural <span orange>Beauty</span>.
             </p>
             <p lh>
                 Made with nature's best ingredients &#8212; our product's transparent ingredients lists allow you to
@@ -853,7 +917,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="portrait">
 
             <img src="assets/images/portrait-young-beautiful-brunette-woman-posing-touching-face-white-background.jpg"
                 alt="Image of a Model">
@@ -868,7 +932,7 @@
                 src="https://cdn.shopify.com/s/files/1/0341/3458/9485/products/FB_HOL22_T2PRODUCT_CONCRETE_GLOSS_BOMB_ICE_INSTANT_COOLING_LIP_LUMINIZER_CLOSED_1200x1500_e4978753-3cb9-4f55-8b8a-9deec67f9fc5.jpg?v=1656456230"
                 alt="A product image">
         </div>
-        <div>
+        <div class="your-questions">
             <p>You have <span orange>questions,</span> we have answers.</p>
             <!--
                 collapsibles
@@ -924,7 +988,7 @@
 
     <section reviews>
         <div class="a-review">
-            <div>
+            <div class="the-review">
                 <span icon class="material-symbols-outlined">
                     format_quote
                 </span>
@@ -932,12 +996,12 @@
                     The UK jewellery awards is an event we always look forward to and we are so honoured to be
                     recognised.
                 </p>
-                <p>
+                <p class="reviewer-name">
                     Jane Cooper
                 </p>
-                <span>
+                <p class="reviewer-location">
                     Naperville, USA
-                </span>
+                </p>
 
 
             </div>
@@ -1041,7 +1105,7 @@
                     <form subscribe>
                         <input subscribe type="text" name="email" id="email" placeholder="Enter your Email">
                         <button subscribe>
-                            <span class="material-symbols-outlined">
+                            <span send-icon class="material-symbols-outlined">
                                 send
                             </span>
                         </button>
