@@ -769,6 +769,84 @@
             content: attr(data-badge);
             border: solid 1px white;
         }
+
+
+        #star8 {
+            background: blue;
+            width: 80px;
+            height: 80px;
+            position: relative;
+            -webkit-transform: rotate(20deg);
+            -moz-transform: rotate(20deg);
+            -ms-transform: rotate(20deg);
+            -o-transform: rotate(20eg);
+        }
+
+        #star8:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 80px;
+            width: 80px;
+            background: blue;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+        }
+
+
+        #star-five {
+            margin: 50px 0;
+            position: relative;
+            display: block;
+            color: red;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            transform: rotate(35deg);
+        }
+
+        #star-five:before {
+            border-bottom: 80px solid red;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -45px;
+            left: -65px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+        }
+
+        #star-five:after {
+            position: absolute;
+            display: block;
+            color: red;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
+        }
+
+        span[new] {
+            position: absolute;
+            color: white;
+            font-size: 25px;
+            z-index: 600;
+            padding-bottom: 60px;
+            transform: rotate(-76deg);
+        }
     </style>
 </head>
 
@@ -852,6 +930,10 @@
         <div class="seconddiv">
 
             <div for-image>
+                <!-- <div id="star-five">
+                    <span new>New</span>
+                </div> -->
+
                 <img class="the-video" src="assets/images/Curology-Header-1024x575 copy.png" alt="Nudge">
             </div>
             <div>
