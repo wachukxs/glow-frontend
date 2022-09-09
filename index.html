@@ -712,7 +712,7 @@
             border-radius: 25px;
         }
 
-        /* ...make ::after or ::before, or use background image */
+        /* ...make ::after or ::before, or use div background image */
         .white-line {
             border: 1px solid white;
             height: 40px;
@@ -722,6 +722,22 @@
             border-radius: 25px;
             position: absolute;
             
+        }
+
+        .the-video {
+            width: 200px;
+            position: absolute;
+            margin-top: -230px;
+            right: 110px;
+        }
+
+        .rounder {
+            width: 100px;
+            margin-left: 110%;
+            margin-bottom: -50%;
+            position: relative;
+            z-index: 500;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -796,15 +812,19 @@
 
     <section images-place>
         <div class="firstdiv">
+
+            <img class="rounder" src="assets/images/Curology-Header-1024x575 copy 2.png" alt="Nudge">
             <img class="in-firstdiv"
                 src="https://img.ltwebstatic.com/images3_pi/2022/03/16/16473943001fa0849b06ad8886392695717fa24def_thumbnail_900x.webp"
                 alt="Sample Product">
+
+
         </div>
 
         <div class="seconddiv">
 
             <div for-image>
-                Sample Text Placeholder for top small image
+                <img class="the-video" src="assets/images/Curology-Header-1024x575 copy.png" alt="Nudge">
             </div>
             <div>
                 <p class="lead-text">
