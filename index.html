@@ -196,8 +196,13 @@
             flex-direction: column;
         }
 
-        footer div.all-links div.single-column a {
+        footer div.all-links div.single-column a, footer .cta-section a {
             margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        footer .cta-section div {
+            margin-top: 15px;
         }
 
         div.last p {
@@ -485,9 +490,13 @@
         section[show-case],
         section[q-and-a],
         section[reviews],
-        section[company-logos],
-        section[samples] {
+        section[company-logos] {
             margin: 100px 0px;
+            padding: 0px 70px;
+        }
+
+        section[samples] {
+            margin-bottom: -70px;
             padding: 0px 70px;
         }
 
@@ -522,7 +531,7 @@
 
         section[company-logos] {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
         }
 
         section[company-logos] img {
@@ -606,23 +615,59 @@
             display: flex;
             align-items: center;
         }
+
+        .img-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .img-wrapper * {
+            margin: 0 auto;
+        }
+
+        .img-wrapper img {
+            border: 1px solid black;
+        }
+
+        .img-wrapper > div {
+            width: 200px;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: #f1825a;
+            color: white;
+        }
+
+        .img-wrapper .darker {
+            background-color: #f0774f;
+
+            width: 30px;
+            padding-top: 2px;
+            border-radius: 47%;
+            color: white;
+        }
+
+
+        footer .first .intro {
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+        }
+
+        .single-column > p, .cta-section > p {
+            padding-bottom: 25px;
+        }
     </style>
 </head>
 
 <body>
 
     <!--
-        TeamApt's FrontEnd Take Home:
-        https://dribbble.com/shots/18840104-Glow-Beauty-Product-Website
 
         Major image from https://img.freepik.com/premium-photo/beautiful-young-asian-woman-with-clean-fresh-skin_65293-690.jpg?w=1800
 
-        TODOs:
-        1. Aspect ratios on images.
-        2. Change the + and - icons in the "You have questions, we have answers." section
-
-        Shortcuts:
-        1. Skipped doing the carousel.
     -->
 
     <header>
@@ -640,6 +685,8 @@
                 <span class="material-symbols-outlined">
                     shopping_bag
                 </span>
+
+                <span class="badge">1</span>
             </div>
         </div>
     </header>
@@ -912,6 +959,22 @@
             <img height="200px" src="https://curology.com/static/8fae3fbffb2b59ae39dd00bc923ad176/a91b6/cleanserMoisturizer%402x.jpg" alt="Sample product">
             <img height="200px" src="https://curology.com/static/8fae3fbffb2b59ae39dd00bc923ad176/a91b6/cleanserMoisturizer%402x.jpg" alt="Sample product">
             <img height="200px" src="https://curology.com/static/8fae3fbffb2b59ae39dd00bc923ad176/a91b6/cleanserMoisturizer%402x.jpg" alt="Sample product">
+
+            <div class="join-us-box">
+                <span class="material-symbols-outlined">
+                    nest_heat_link_gen_3
+                </span>
+                <p>
+                    Join us and get all the services we provide
+                </p>
+
+                <a class="darker" href="#">
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                        </span>
+                </a>
+                
+            </div>
         </div>
     </section>
 
@@ -922,7 +985,7 @@
                 <p>
                     <span logo>Glow <span fullstop>.</span></span>
                 </p>
-                <p>
+                <p class="footer-nudge" lh>
                     Keep up with our new releases, Beauty Tips & What Emma's been up to.
                 </p>
                 <div class="social-links">
@@ -972,7 +1035,7 @@
 
             <div class="cta-section">
                 <p>Subscribe</p>
-                <p>Get 10% off your first order</p>
+                <a href="#">Get 10% off your first order</a>
 
                 <div>
                     <form subscribe>
