@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>TeamApt Takehome</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+
+    <style>
+        span[orange] {
+            color: #f0683d;
+        }
+
+        /*
+            primary text color #1a1738
+            secondary text color #665957
+
+            tertiary text [orange] color #f0683d
+        */
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+        }
+
+        *,
+        html,
+        body {
+            margin: 0px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #665957;
+
+            background-color: #faf8f6;
+        }
+
+        header div.left-link {
+            font-family: 'Lato', sans-serif;
+        }
+
+        section[images-place] {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+        }
+
+        section[images-place] .seconddiv {
+            background-color: rgb(152, 150, 240);
+        }
+
+        div[side-by-side] {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            column-gap: 15px;
+            padding: 10px;
+        }
+
+        div[side-by-side] div p:nth-child(1) {
+            font-weight: 400;
+        }
+
+        div[side-by-side] div p:nth-child(2) {
+            font-weight: 300;
+        }
+
+        section[show-case] {
+            margin-top: 100px;
+        }
+
+        section[show-case]>div.wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            row-gap: 15px;
+            column-gap: 20px;
+        }
+
+        .product img {
+            max-width: 100%;
+        }
+
+        .product p {
+            text-align: center;
+        }
+
+        p.item-name {
+            font-size: large;
+            color: #1a1738;
+            margin-top: 5px;
+        }
+
+        p.sec-text,
+        header span[logo],
+        .lead-text,
+        .review-text {
+            color: #1a1738;
+        }
+
+        p.price {
+            margin-top: 5px;
+            font-size: small;
+        }
+
+        section[highlights] {
+            display: grid;
+            grid-template-columns: 4fr 2fr;
+        }
+
+        section[highlights]>div:first-child {
+            background-color: #fbe5de;
+        }
+
+        section[highlights] img {
+            width: 120%;
+            margin-left: -30%;
+            border-radius: 180px;
+        }
+
+        section[highlights]>div:first-child {
+            padding: 50px;
+        }
+
+        section[highlights]>div>p:first-child {
+            font-size: 45px;
+        }
+
+        section[highlights]>div:first-child>p {
+            max-width: 80%;
+        }
+
+        p[lh] {
+            line-height: 1.5;
+        }
+
+
+
+        footer {
+            background-color: #19183a;
+
+            padding-top: 250px;
+            padding-right: 75px;
+            padding-bottom: 30px;
+            padding-left: 75px;
+        }
+
+        footer div.last {
+            color: #74758f;
+        }
+
+        footer a {
+            color: #f2f1ff;
+            text-decoration: none;
+        }
+
+        header a {
+            color: #74758f;
+            text-decoration: none;
+        }
+
+        footer div.first {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+
+            column-gap: 40px;
+            color: #f2f1ff;
+        }
+
+        footer div.all-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        footer div.all-links div.single-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer div.all-links div.single-column a {
+            margin-bottom: 15px;
+        }
+
+        div.last p {
+            text-align: center;
+        }
+
+        header div.left-links {
+            display: flex;
+
+            justify-content: space-evenly;
+            column-gap: 85px;
+            align-items: center;
+        }
+
+        img.in-firstdiv {
+            width: 75%;
+            height: 75%;
+
+            margin-left: 40%;
+            margin-top: 20%;
+            position: relative;
+
+
+            border-top-left-radius: 185px;
+            border-top-right-radius: 185px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .seconddiv {
+            padding: 175px;
+        }
+
+        .lead-text {
+            font-size: 35px;
+        }
+
+        .review-text {
+            font-size: 25px;
+            max-width: 80%;
+
+            padding-bottom: 55px;
+        }
+
+        .main-cta-button {
+            display: flex;
+            align-items: center;
+
+            background-color: #ec8612;
+            border-radius: 45px;
+            color: white;
+            padding: 15px 25px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .nudge-button {
+            display: flex;
+            align-items: center;
+
+            border: none;
+            padding: 15px 15px;
+            font-size: 16px;
+
+            background-color: transparent;
+        }
+
+        section[first]>div:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+
+        section[first]>div:first-child p {
+            margin-bottom: 35px;
+        }
+
+        section[first] p[lh] {
+            max-width: 55%;
+        }
+
+        div.buttons-cta {
+            display: flex;
+        }
+
+        section[first] {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+        }
+
+        section[first] p:first-child {
+            font-size: 100px;
+        }
+
+        .left-links div {
+            background-color: orange;
+            color: wheat;
+            padding: 10px 12px;
+            border-radius: 22px;
+        }
+
+        .left-links div span {
+            font-weight: 600;
+        }
+
+        span[img] img.white-line {
+            border-radius: 35px;
+        }
+
+        span[img] img.white-line {
+            border-radius: 35px;
+        }
+
+        div.one-major-image>img {
+            width: 185%;
+            margin-left: -70%;
+        }
+
+
+        section[q-and-a] {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+        }
+
+
+        section[q-and-a]>div:nth-child(2)>p:nth-child(1) {
+            font-size: 60px;
+            font-weight: 300;
+        }
+
+        span[logo] {
+            font-size: 35px;
+        }
+
+        span[logo] span[fullstop] {
+            /* font-size: 50px; */
+            font-weight: 900;
+            color: #f0683d;
+        }
+
+
+        div[collapsible] {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .collapsible:after {
+            font-family: 'Material Symbols Outlined';
+            content: '\e145';
+            color: #1a1738;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\e15b";
+        }
+
+
+        div.intro-text>p:first-child {
+            font-size: 45px;
+            margin-bottom: 5px;
+        }
+
+        div.intro-text>button {
+            display: flex;
+            align-items: center;
+            color: #e26f4d;
+
+            background-color: transparent;
+            padding: 15px 15px;
+            font-size: 16px;
+            border-radius: 50px;
+            border: solid 1px #e26f4d;
+
+        }
+
+        .shadey-parent {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 55px;
+            max-width: 65%;
+
+            height: 130px;
+            /* temporary */
+        }
+
+        /* .shadey-parent .shadey:nth-child(odd) {
+            background-image: linear-gradient(to left bottom, #ffffff, #e5d0ea, #de9dc1, #d66782, #bc3636);
+
+            border-top-left-radius: 250px;
+            border-top-right-radius: 300px;
+            border-bottom-right-radius: 250px;
+            border-bottom-left-radius: 0px;
+
+            
+        } */
+
+        /* .shadey-parent .shadey:nth-child(even) {
+            background-image: linear-gradient(to left bottom,#bc3636, #d66782, #de9dc1, #e5d0ea, #ffffff  );
+
+            border-top-left-radius: 200px;
+            border-top-right-radius: 60px;
+            border-bottom-right-radius: 200px;
+            border-bottom-left-radius: 60px;
+        } */
+
+        .shadey-parent .shadey:nth-child(odd)::after {
+            background-image: linear-gradient(to left bottom, #ffffff, #fff, #fff, transparent, transparent);
+
+            content: "";
+            z-index: 100;
+            border-radius: 50% 50% 0% 0%;
+            margin-left: -25px;
+            position: absolute;
+            height: 13%;
+            width: 9%;
+            margin-top: -80px;
+            rotate: 230deg;
+
+
+
+        }
+
+        .shadey-parent .shadey:nth-child(even)::after {
+            content: "";
+            z-index: 100;
+            border-radius: 50% 50% 0% 0%;
+            margin-left: -25px;
+            position: absolute;
+            height: 13%;
+            width: 9%;
+            margin-top: -80px;
+            rotate: 50deg;
+            background-image: linear-gradient(to left bottom, transparent, transparent, #fff, #fff, #ffffff);
+
+        }
+
+        .shadey>div {
+            margin-top: 20px;
+        }
+
+        .shadey span {
+            position: relative;
+            z-index: 200;
+        }
+
+        .shadey>div>span:first-child {
+            color: #1a1738;
+        }
+
+        .shadey>div>span:nth-child(3) {
+            color: #e26f4d;
+            font-size: xx-large;
+        }
+
+        .collapsible {
+            text-align: left;
+            border: none;
+
+            padding: 20px 0px;
+            background: transparent;
+            font-size: x-large;
+
+            color: #1a1738;
+        }
+
+        div[collapsible] hr {
+            border-top: 1px solid #1a1738;
+            width: 100%;
+        }
+
+        .content.two,
+        .content.three {
+            display: none;
+        }
+
+        .a-product-image>img {
+            margin-top: 70px;
+
+            border-top-left-radius: 47%;
+            border-top-right-radius: 47%;
+        }
+
+        section[first],
+        section[show-case],
+        section[q-and-a],
+        section[reviews],
+        section[company-logos],
+        section[samples] {
+            margin: 100px 0px;
+            padding: 0px 70px;
+        }
+
+        section[images-place] {
+            margin-top: 50px;
+
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 70px;
+        }
+
+        section[highlights] {
+            margin-top: 50px;
+
+            padding-top: 0px;
+            padding-right: 70px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+        }
+
+        div[collapsible] button[type="button"] {
+            cursor: pointer;
+        }
+
+        footer hr {
+            border-top: 1px solid #282749;
+            width: 60%;
+            margin: 30px auto;
+        }
+
+
+        section[company-logos] {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        section[company-logos] img {
+            width: 15%;
+        }
+
+
+        .a-review {
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+        }
+
+        .a-review>div {
+            background-color: white;
+            padding: 30px 50px;
+
+            margin-right: -120px;
+        }
+
+        .a-review span[icon] {
+            font-size: 90px;
+            rotate: 180deg;
+            color: #f0683d;
+        }
+
+        .a-review img {
+            height: 250px;
+            border-radius: 50%;
+            border: 7px solid #fcefe6;
+
+
+            margin: auto 0;
+        }
+
+
+        form[subscribe] {
+            /* This bit sets up the horizontal layout */
+            display: flex;
+            flex-direction: row;
+
+            /* This bit draws the box around it */
+            /* border: 1px solid grey; */
+
+            /* I've used padding so you can see the edges of the elements. */
+            padding: 2px;
+
+            border-radius: 25px;
+            background-color: #262653;
+        }
+
+        input[subscribe] {
+            /* Tell the input to use all the available space */
+            flex-grow: 2;
+            /* And hide the input's outline, so the form looks like the outline */
+            border: none;
+
+            border-radius: 25px;
+            background-color: #262653;
+            padding: 10px;
+        }
+
+        input[subscribe]:focus {
+            /* removing the input focus blue box. Put this on the form if you like. */
+            outline: none;
+        }
+
+        input[subscribe]::placeholder, input[subscribe]:-ms-input-placeholder, input[subscribe]::-ms-input-placeholder {
+            color: #77789a;
+        }
+
+        button[subscribe] {
+            /* Just a little styling to make it pretty */
+            border: 2px solid white;
+            background: #f0683d;
+            color: white;
+
+            border-radius: 25px;
+            height: 35px;
+            width: 35px;
+
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+        TeamApt's FrontEnd Take Home:
+        https://dribbble.com/shots/18840104-Glow-Beauty-Product-Website
+
+        Major image from https://img.freepik.com/premium-photo/beautiful-young-asian-woman-with-clean-fresh-skin_65293-690.jpg?w=1800
+
+        TODOs:
+        1. Aspect ratios on images.
+        2. Change the + and - icons in the "You have questions, we have answers." section
+
+        Shortcuts:
+        1. Skipped doing the carousel.
+    -->
+
+    <header>
+        <div class="right-link">
+            <a href="#"><span logo>Glow<span fullstop>.</span> </span></a>
+        </div>
+
+
+        <div class="left-links">
+            <a href="#">Product</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Reviews</a>
+            <div>
+                <span class="material-symbols-outlined">
+                    shopping_bag
+                </span>
+            </div>
+        </div>
+    </header>
+
+
+    <section first>
+
+        <div>
+            <p class="sec-text">
+                Let your skin Going <span img>
+                    <span class="white-line"></span>
+                    <img class="inline-text-image" width="100px" src="assets/images/wepik-photo-mode-202288-32350.png"
+                        alt="tiny model">
+                </span> Out.
+            </p>
+
+            <p lh>
+                We want to bring to the world through our products that very special feeling joy, healthy and positive
+                energy.
+            </p>
+
+            <div class="buttons-cta">
+                <button class="main-cta-button">
+                    <span text>Shop Now</span> <span class="material-symbols-outlined">
+                        arrow_right_alt
+                    </span>
+                </button>
+
+                <button class="nudge-button">
+                    <span class="material-symbols-outlined">
+                        arrow_right
+                    </span> <span text>How to use</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="one-major-image">
+            <img src="assets/images/major-one-removebg-preview.png" alt="Major Image">
+        </div>
+
+    </section>
+
+
+    <section images-place>
+        <div class="firstdiv">
+            <img class="in-firstdiv"
+                src="https://img.ltwebstatic.com/images3_pi/2022/03/16/16473943001fa0849b06ad8886392695717fa24def_thumbnail_900x.webp"
+                alt="Sample Product">
+        </div>
+
+        <div class="seconddiv">
+
+            <div for-image>
+                Sample Text Placeholder for top small image
+            </div>
+            <div>
+                <p class="lead-text">
+                    The self care brand that's setting a new <span orange>standard Clean</span> products.
+                </p>
+
+                <div side-by-side>
+                    <div>
+                        <p>Where are products made?</p>
+                        <p>Many brands, especially in period care, carry products that take centuries.</p>
+                    </div>
+                    <div>
+                        <p>Where are products made?</p>
+                        <p>Many brands, especially in period care, carry products that take centuries.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section show-case>
+
+        <div class="wrapper">
+
+            <div class="intro-text">
+                <p>Trending On <span orange>Essentials</span></p>
+
+                <p>Made with nature's best ingredients &#8212; our product's transparent ingredients. Fear of God
+                    Essentials.</p>
+
+                <button><span>Browse All Products</span> <span class="material-symbols-outlined">
+                        arrow_right_alt
+                    </span></button>
+            </div>
+
+            <div class="product">
+                <img loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0341/3458/9485/files/FS294215_-_FS_Fat_Water_Milky_HP_Tile_IMG_1_1000x.jpg?v=1661273801"
+                    alt="Sample Product Image">
+                <p class="item-name">Shower Butter</p>
+                <p class="price">$190.99</p>
+            </div>
+            <div class="product">
+                <img loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0341/3458/9485/files/2-TILES_STUNNA-NUDE-BUNDLEEDITORIAL_1600X1600_91b080dd-2c1e-48e2-8004-a7bfb98891fd_1000x.jpg?v=1658775091"
+                    alt="Sample Product Image">
+                <p class="item-name">Luxury Oil Gel</p>
+                <p class="price">$190.99</p>
+            </div>
+            <div class="product">
+                <img loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0341/3458/9485/files/2-TILES_BEST-SELLERS_EDITORIAL_1600X1600_2_1000x.jpg?v=1658775022"
+                    alt="Sample Product Image">
+                <p class="item-name">Body Oil</p>
+                <p class="price">$190.99</p>
+            </div>
+
+            <div class="product">
+                <img loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0341/3458/9485/files/2-TILES_PRO-FILTR_EDITORIAL_1600X1600_1_1000x.jpg?v=1658861767"
+                    alt="Sample Product Image">
+                <p class="item-name">Sunrise Shampoo</p>
+                <p class="price">$190.99</p>
+            </div>
+
+            <div class="product">
+                <img loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0341/3458/9485/files/2-TILES_BEST-SELLERS_EDITORIAL_1600X1600_2_1000x.jpg?v=1658775022"
+                    alt="Sample Product Image">
+                <p class="item-name">Luxury Oil Gel</p>
+                <p class="price">$190.99</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section highlights>
+        <div>
+            <p class="lead-text">
+                We make going all natural <span>Beauty</span>.
+            </p>
+            <p lh>
+                Made with nature's best ingredients &#8212; our product's transparent ingredients lists allow you to
+                know.
+            </p>
+
+            <div class="shadey-parent">
+                <div class="shadey">
+                    <div>
+                        <span>Product Users</span>
+                        <br />
+                        <span>7M+</span>
+                    </div>
+                </div>
+                <div class="shadey">
+                    <div>
+                        <span>Brand Product</span>
+                        <br />
+                        <span>99+</span>
+                    </div>
+                </div>
+                <div class="shadey">
+                    <div>
+                        <span>Product Reviews</span>
+                        <br />
+                        <span>5M</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+            <img src="assets/images/portrait-young-beautiful-brunette-woman-posing-touching-face-white-background.jpg"
+                alt="Image of a Model">
+
+        </div>
+    </section>
+
+
+    <section q-and-a>
+        <div class="a-product-image">
+            <img height="380px"
+                src="https://cdn.shopify.com/s/files/1/0341/3458/9485/products/FB_HOL22_T2PRODUCT_CONCRETE_GLOSS_BOMB_ICE_INSTANT_COOLING_LIP_LUMINIZER_CLOSED_1200x1500_e4978753-3cb9-4f55-8b8a-9deec67f9fc5.jpg?v=1656456230"
+                alt="A product image">
+        </div>
+        <div>
+            <p>You have <span orange>questions,</span> we have answers.</p>
+            <!--
+                collapsibles
+                <div>
+                        <p>Where are products made?</p>
+                        <p>Many brands, especially in period care, carry products that take centuries.</p>
+                    </div>
+            -->
+
+            <div collapsible>
+
+                <hr />
+                <button type="button" class="collapsible active">
+                    <span>Where are products made?</span>
+
+                    <!-- <span class="material-symbols-outlined">
+                        add
+                    </span> -->
+                </button>
+                <div class="content one">
+                    <p>Many brands, especially in period care, carry products that take centuries.</p>
+                </div>
+                <hr />
+
+                <button type="button" class="collapsible">
+                    <span>How to Purchase our product?</span>
+
+                    <!-- <span class="material-symbols-outlined">
+                        add
+                    </span> -->
+                </button>
+                <div class="content two">
+                    <p>Many brands, especially in period care, carry products that take centuries.</p>
+                </div>
+                <hr />
+
+                <button type="button" class="collapsible">
+                    <span>How to Purchase our product?</span>
+
+                    <!-- <span class="material-symbols-outlined">
+                        add
+                    </span> -->
+                </button>
+                <div class="content three">
+                    <p>Many brands, especially in period care, carry products that take centuries.</p>
+                </div>
+                <hr />
+
+            </div>
+        </div>
+    </section>
+
+
+    <section reviews>
+        <div class="a-review">
+            <div>
+                <span icon class="material-symbols-outlined">
+                    format_quote
+                </span>
+                <p class="review-text">
+                    The UK jewellery awards is an event we always look forward to and we are so honoured to be
+                    recognised.
+                </p>
+                <p>
+                    Jane Cooper
+                </p>
+                <span>
+                    Naperville, USA
+                </span>
+
+
+            </div>
+
+            <img src="assets/images/reviewer.jpeg" alt="A Reviewer">
+        </div>
+    </section>
+
+    <section company-logos>
+        <img src="assets/images/pngkey.com-calvin-klein-logo.png" alt="Partner Company Logo">
+        <img src="assets/images/pngkey.com-calvin-klein-logo.png" alt="Partner Company Logo">
+        <img src="assets/images/pngkey.com-calvin-klein-logo.png" alt="Partner Company Logo">
+        <img src="assets/images/pngkey.com-calvin-klein-logo.png" alt="Partner Company Logo">
+        <img src="assets/images/pngkey.com-calvin-klein-logo.png" alt="Partner Company Logo">
+    </section>
+
+    <section samples>
+        <div class="img-wrapper">
+            <img height="200px" src="https://curology.com/static/8fae3fbffb2b59ae39dd00bc923ad176/a91b6/cleanserMoisturizer%402x.jpg" alt="Sample product">
+            <img height="200px" src="https://curology.com/static/8fae3fbffb2b59ae39dd00bc923ad176/a91b6/cleanserMoisturizer%402x.jpg" alt="Sample product">
+            <img height="200px" src="https://curology.com/static/8fae3fbffb2b59ae39dd00bc923ad176/a91b6/cleanserMoisturizer%402x.jpg" alt="Sample product">
+        </div>
+    </section>
+
+    <footer>
+        <div class="first">
+            <div class="intro">
+
+                <p>
+                    <span logo>Glow <span fullstop>.</span></span>
+                </p>
+                <p>
+                    Keep up with our new releases, Beauty Tips & What Emma's been up to.
+                </p>
+                <div class="social-links">
+                    <span class="material-symbols-outlined">
+                        nest_heat_link_gen_3
+                    </span>
+                    <span class="material-symbols-outlined">
+                        nest_heat_link_gen_3
+                    </span>
+                    <span class="material-symbols-outlined">
+                        nest_heat_link_gen_3
+                    </span>
+                    <span class="material-symbols-outlined">
+                        nest_heat_link_gen_3
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="all-links">
+
+                <div class="single-column">
+                    <p>Company</p>
+                    <a href="#">About</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Branding</a>
+                    <a href="#">Newsroom</a>
+                </div>
+
+                <div class="single-column">
+                    <p>Rescources</p>
+                    <a href="#">College</a>
+                    <a href="#">Support</a>
+                    <a href="#">Safty</a>
+                    <a href="#">StramKit</a>
+                </div>
+
+                <div class="single-column">
+                    <p>Terms & Conditions</p>
+                    <a href="#">Policy</a>
+                    <a href="#">Faq</a>
+                    <a href="#">Return & Delivery</a>
+                    <a href="#">Tracking</a>
+                </div>
+
+            </div>
+
+            <div class="cta-section">
+                <p>Subscribe</p>
+                <p>Get 10% off your first order</p>
+
+                <div>
+                    <form subscribe>
+                        <input subscribe type="text" name="email" id="email" placeholder="Enter your Email">
+                        <button subscribe>
+                            <span class="material-symbols-outlined">
+                                send
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="last">
+            <hr>
+
+            <p>Copyright &copy; <span id="current-year"></span> Musemind | All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        let coll = document.getElementsByClassName("collapsible");
+
+        for (let i = 0; i < coll.length; i++) {
+            // initialize display property.
+            if (coll[i].className.includes("active")) { // has "active"
+                coll[i].nextElementSibling.style.display = "block"
+            } else {
+                coll[i].nextElementSibling.style.display = "none"
+            }
+
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let content = this.nextElementSibling;
+
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+
+            });
+        }
+
+        // set current full year [prevent outdated year]
+        document.getElementById("current-year").innerText = new Date().getFullYear()
+    </script>
+
+</body>
+
+</html>
